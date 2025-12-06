@@ -1,0 +1,25 @@
+# Core
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+
+# Database
+supabase
+psycopg2-binary
+
+# External APIs
+twilio
+httpx
+requests
+
+# AI & OCR
+transformers
+torch
+pillow
+sentencepiece
+protobuf
+
+# Utilities
+python-dotenv
+python-multipart

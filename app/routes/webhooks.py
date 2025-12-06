@@ -1,6 +1,14 @@
 # Update app/routes/webhooks.py
 import aiohttp
+from app.clients.twilio_client import twilio_client
+from app.clients.supabase_client import supabase_client
+from app.services.ocr_service import ocr_service
+import base64
+import io
 
+
+logger = logging.getLogger(__name__)
+router = APIRouter() 
 async def process_message(phone: str, message: str, media_url: str = None):
     """Process incoming WhatsApp message with OCR support."""
     try:
@@ -72,3 +80,4 @@ async def process_message(phone: str, message: str, media_url: str = None):
             )
         except:
             pass
+__all__ = ["router"] 
